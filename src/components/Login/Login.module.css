@@ -1,0 +1,14 @@
+.login {
+  height: 100vh;
+}
+
+.box {
+  width: 80vw !important;
+  max-width: 450px;
+}
+
+.button {
+  height: 5vmin;
+  width: 15vmin;
+  font-size: 2vmin;
+}
