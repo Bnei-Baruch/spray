@@ -5,16 +5,19 @@ import {
 import { useSelector } from 'react-redux';
 
 import LoginRoutes from '../Login/LoginRoutes';
-import {Counter} from '../../features/counter/Counter'
 
 import {selectUser} from '../../redux/user'
 
 const Main = (props) => {
-  const user = useSelector(selectUser);
+  const {user} = useSelector(selectUser);
   console.log(user);
 
-  if (!user || user.expired || true) {
-    return <LoginRoutes />;
+  if (!user || user.expired) {
+    return (
+      <div>
+        <LoginRoutes />
+      </div>
+    );
   }
   return (
     <Header>This is main page.</Header>

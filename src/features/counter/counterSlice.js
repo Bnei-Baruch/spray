@@ -34,12 +34,14 @@ export const { increment, decrement, incrementByAmount, setTest} = slice.actions
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched
 export const incrementAsync = amount => dispatch => {
+  console.log('incrementAsync', amount);
   setTimeout(() => {
     dispatch(incrementByAmount(amount));
   }, 1000);
 };
 
 export const fetchFromServer = () => dispatch => {
+  console.log('fetchFromServer');
   fetch(`http://bbdev6.kbb1.com:4000/hello`, {
     headers: {'Content-Type': 'application/json'},
   }).then(results => results.json()).then(data => {

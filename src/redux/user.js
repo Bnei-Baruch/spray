@@ -33,13 +33,17 @@ export const slice = createSlice({
   initialState: {
     user: null,
   },
-  reducers: {
+  extraReducers: {
     [USER_LOADED]: onUser,
     [USER_FOUND]: onUser,
     [USER_EXPIRED]: onNoUser,
     [USER_SIGNED_OUT]: onNoUser,
   },
 });
+
+console.log(slice.actions);
+console.log(slice);
+console.log(USER_EXPIRED, USER_FOUND, USER_LOADED, USER_SIGNED_OUT);
 
 //export const { USER_EXPIRED, USER_FOUND, USER_LOADED, USER_SIGNED_OUT } = slice.actions;
 
