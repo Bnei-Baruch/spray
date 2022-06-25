@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",
-    "jsrsasign": "^8.0.12",
+    "jsrsasign": "^10.5.25",
     "oidc-client": "^1.10.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
